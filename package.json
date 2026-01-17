@@ -1,0 +1,94 @@
+{
+  "name": "react-simple-fetch",
+  "version": "1.0.0",
+  "description": "A lightweight React hook for managing API calls with automatic state management, request cancellation, and TypeScript support",
+  "keywords": [
+    "react",
+    "hook",
+    "fetch",
+    "api",
+    "http",
+    "request",
+    "ajax",
+    "typescript",
+    "rest",
+    "client",
+    "react-hook",
+    "use-fetch",
+    "api-client",
+    "http-client",
+    "data-fetching",
+    "async",
+    "state-management",
+    "loading-state",
+    "error-handling",
+    "abort-controller"
+  ],
+  "author": {
+    "name": "Alessio Galtelli",
+    "email": "alessiogaltelli@yahoo.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alessio99-a/react-simple-fetch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alessio99-a/react-simple-fetch/issues"
+  },
+  "homepage": "https://github.com/Alessio99-a/react-simple-fetch#readme",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run type-check && npm run lint && npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "simple-fetch-api": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.8",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}
