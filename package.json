@@ -1,5 +1,5 @@
 {
-  "name": "react-simple-fetch",
+  "name": "react-simple-fetch-api",
   "version": "1.0.0",
   "description": "A lightweight React hook for managing API calls with automatic state management, request cancellation, and TypeScript support",
   "keywords": [
