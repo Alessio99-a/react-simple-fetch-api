@@ -1,35 +1,35 @@
 # react-simple-fetch-api
 
-Un hook React per gestire chiamate API in modo semplice ed efficiente, basato sulla libreria `simple-fetch-api`.
+A lightweight React hook to handle API calls in a simple, clean, and efficient way, built on top of the `simple-fetch-api` library.
 
-## Caratteristiche
+## Features
 
-- ✅ Gestione automatica dello stato (loading, data, error)
-- ✅ Cancellazione automatica delle richieste pendenti
-- ✅ Auto-fetch opzionale al mount del componente
-- ✅ TypeScript support completo
-- ✅ Reset dello stato
-- ✅ Override delle opzioni per ogni chiamata
+- ✅ Automatic state management (`loading`, `data`, `error`)
+- ✅ Automatic cancellation of pending requests
+- ✅ Optional auto-fetch on component mount
+- ✅ Full TypeScript support
+- ✅ State reset functionality
+- ✅ Per-request options override
 
-## Installazione
+## Installation
 
 ```bash
 npm install react-simple-fetch-api simple-fetch-api
 ```
 
-## Utilizzo Base
+## Basic Usage
 
 ```tsx
 import { useFetch } from 'react-simple-fetch-api';
 
 function UserProfile() {
-  const { data, loading, error, execute } = useFetch(
+  const { data, loading, error } = useFetch(
     {
       url: 'https://api.example.com/user/123',
       method: 'GET',
     },
     true
-  ); // auto-fetch al mount
+  ); // auto-fetch on mount
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -39,7 +39,7 @@ function UserProfile() {
 }
 ```
 
-## Utilizzo Manuale
+## Manual Execution
 
 ```tsx
 function CreateUser() {
@@ -62,25 +62,39 @@ function CreateUser() {
 }
 ```
 
-## API
+## API Reference
 
 ### `useFetch<T>(initialOptions, autoFetch?)`
 
-#### Parametri
+#### Parameters
 
-- `initialOptions`: `ApiFetchOptions` - Opzioni iniziali per la chiamata API
-- `autoFetch`: `boolean` (default: `false`) - Se `true`, esegue la chiamata automaticamente al mount
+- `initialOptions`: `ApiFetchOptions`
+  Initial configuration for the API request.
 
-#### Ritorna
+- `autoFetch`: `boolean` (default: `false`)
+  If `true`, the request is executed automatically when the component mounts.
 
-Un oggetto contenente:
+#### Returns
 
-- `data`: `T | null` - I dati ricevuti dalla chiamata API
-- `loading`: `boolean` - Stato di caricamento
-- `error`: `ApiError | null` - Eventuale errore
-- `execute`: `(options?: Partial<ApiFetchOptions>) => Promise<ApiResult<T>>` - Funzione per eseguire la chiamata
-- `reset`: `() => void` - Funzione per resettare lo stato
+An object containing:
 
-## Licenza
+- `data`: `T | null`
+  The data returned from the API call.
+
+- `loading`: `boolean`
+  Indicates whether the request is in progress.
+
+- `error`: `ApiError | null`
+  Any error that occurred during the request.
+
+- `execute`: `(options?: Partial<ApiFetchOptions>) => Promise<ApiResult<T>>`
+  Function to manually execute the API request, optionally overriding the initial options.
+
+- `reset`: `() => void`
+  Resets `data`, `loading`, and `error` to their initial state.
+
+## License
 
 MIT
+
+---
