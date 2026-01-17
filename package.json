@@ -31,12 +31,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alessio99-a/react-simple-fetch.git"
+    "url": "git+https://github.com/Alessio99-a/react-simple-fetch-api.git"
   },
   "bugs": {
-    "url": "https://github.com/Alessio99-a/react-simple-fetch/issues"
+    "url": "https://github.com/Alessio99-a/react-simple-fetch-api/issues"
   },
-  "homepage": "https://github.com/Alessio99-a/react-simple-fetch#readme",
+  "homepage": "https://github.com/Alessio99-a/react-simple-fetch-api#readme",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

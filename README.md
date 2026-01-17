@@ -1,4 +1,4 @@
-# react-simple-fetch
+# react-simple-fetch-api
 
 Un hook React per gestire chiamate API in modo semplice ed efficiente, basato sulla libreria `simple-fetch-api`.
 
@@ -14,13 +14,13 @@ Un hook React per gestire chiamate API in modo semplice ed efficiente, basato su
 ## Installazione
 
 ```bash
-npm install react-simple-fetch simple-fetch-api
+npm install react-simple-fetch-api simple-fetch-api
 ```
 
 ## Utilizzo Base
 
 ```tsx
-import { useFetch } from 'react-simple-fetch';
+import { useFetch } from 'react-simple-fetch-api';
 
 function UserProfile() {
   const { data, loading, error, execute } = useFetch(
